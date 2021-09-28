@@ -1,0 +1,1 @@
+onmessage=({data:e})=>{const s=new XMLHttpRequest;s.open("GET",e.path,!0),s.responseType="arraybuffer",s.onload=()=>{200==s.status&&postMessage({id:e.id,data:s.response,type:e.type},[s.response])},s.send()};

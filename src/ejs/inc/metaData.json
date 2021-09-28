@@ -1,0 +1,48 @@
+{
+    // for sns (javascript)
+    "common_js": {
+        "tit": "",
+        "des": "",
+        "img": "",
+        "url": "",
+        "adress": ""
+    },
+    // for meta (ejs)
+    "common": {
+        "tit": "",
+        "des": "",
+        "img": "",
+        "keyword": "",
+        "fb": {
+            "tit": "",
+            "des": "",
+            "img": "",
+            "url": "",
+            "siteName": "",
+            "type": "website"
+        },
+        "tw": {
+            "img": "",
+            "url": "",
+            "siteName": "",
+            "creator": "",
+            "card": "summary_large_image",
+            "hash": "",
+            "text": ""
+        },
+        "line": {
+            "tit": "",
+            "des": "",
+            "img": "",
+            "url": "",
+            "text": ""
+        },
+        "mail": {
+            "tit": "",
+            "des": "",
+            "adress": ""
+        }
+    }
+}
+
+

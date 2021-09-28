@@ -1,0 +1,82 @@
+/* --------------------------------------------------------------------------------
+*
+*   loading
+*
+-------------------------------------------------------------------------------- */
+#loading {
+  
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  
+  width: calc(100% - 42% * 2);
+  height: 100vh;
+  
+  margin: 0 42%;
+  
+  @include max(768) {
+
+    width: calc(100% - 40% * 2);
+    margin: 0 40%;
+
+  }
+  
+  overflow: hidden;
+  
+  // opacity: 0;
+  // display: none;
+  
+  .loadingBar {
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -1px;
+    
+    height: 1px;
+    background-color: #ffffff;
+    
+  }
+
+  .loadingPercent {
+    position: absolute;
+    top: calc(50% + 20px);
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #ffffff;
+    font-size: 12px;
+    
+    @extend %Ubuntu_bold;
+  }
+
+  .ballWrap {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -40px;
+    margin-top: calc(-40px + -10px);
+    
+    .ball {
+      width: 80px;
+      height: auto;
+    }
+
+  }
+
+}
+
+// ios用
+.isIOSSafari #loading {
+    
+  // media query
+  @include max(768) {
+    .loadingBar {margin-top: -40px;}
+    .loadingPercent {margin-top: -40px;}
+  }
+  
+}
+
+.id_top #loading {
+  display: block;
+}

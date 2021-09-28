@@ -1,0 +1,368 @@
+{
+    "asset": {
+        "version": "2.0",
+        "generator": "Open Asset Import Library (assimp v5.0.5eb040c7)"
+    },
+    "accessors": [
+        {
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 2011,
+            "type": "VEC3",
+            "max": [
+                2202.847900390625,
+                1462.1619873046876,
+                1348.1090087890626
+            ],
+            "min": [
+                -2202.847900390625,
+                -1462.1619873046876,
+                -1348.1090087890626
+            ]
+        },
+        {
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 8292,
+            "type": "SCALAR",
+            "max": [
+                2010
+            ],
+            "min": [
+                0
+            ]
+        },
+        {
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 2123,
+            "type": "VEC3",
+            "max": [
+                2396.888916015625,
+                1462.1619873046876,
+                1499.425537109375
+            ],
+            "min": [
+                -2396.888916015625,
+                -1462.1619873046876,
+                -1499.425537109375
+            ]
+        },
+        {
+            "bufferView": 3,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 8880,
+            "type": "SCALAR",
+            "max": [
+                2122
+            ],
+            "min": [
+                0
+            ]
+        },
+        {
+            "bufferView": 4,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 2116,
+            "type": "VEC3",
+            "max": [
+                2714.5712890625,
+                1106.5594482421876,
+                1162.31396484375
+            ],
+            "min": [
+                -2714.5712890625,
+                -1106.5594482421876,
+                -1162.31396484375
+            ]
+        },
+        {
+            "bufferView": 5,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 8838,
+            "type": "SCALAR",
+            "max": [
+                2115
+            ],
+            "min": [
+                0
+            ]
+        }
+    ],
+    "buffers": [
+        {
+            "byteLength": 179040,
+            "uri": "result.bin"
+        }
+    ],
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 24132,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 24132,
+            "byteLength": 33168,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 57300,
+            "byteLength": 25476,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 82776,
+            "byteLength": 35520,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 118296,
+            "byteLength": 25392,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 143688,
+            "byteLength": 35352,
+            "target": 34963
+        }
+    ],
+    "materials": [
+        {
+            "name": "Mat.7",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.800000011920929,
+                    0.800000011920929,
+                    0.800000011920929,
+                    1.0
+                ],
+                "metallicFactor": 0.0
+            },
+            "emissiveFactor": [
+                1.0,
+                0.9750000238418579,
+                0.9399999976158142
+            ]
+        }
+    ],
+    "meshes": [
+        {
+            "name": "wire__3",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 1,
+                    "attributes": {
+                        "POSITION": 0
+                    }
+                }
+            ]
+        },
+        {
+            "name": "wire__2",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 3,
+                    "attributes": {
+                        "POSITION": 2
+                    }
+                }
+            ]
+        },
+        {
+            "name": "wire__1",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 5,
+                    "attributes": {
+                        "POSITION": 4
+                    }
+                }
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "name": "RootNode",
+            "children": [
+                1,
+                5
+            ]
+        },
+        {
+            "name": "CINEMA_4D_Editor_$AssimpFbx$_Translation",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                600.0,
+                300.0,
+                600.0,
+                1.0
+            ],
+            "children": [
+                2
+            ]
+        },
+        {
+            "name": "CINEMA_4D_Editor_$AssimpFbx$_Rotation",
+            "matrix": [
+                0.7071067690849304,
+                0.0,
+                -0.7071067690849304,
+                0.0,
+                -0.23545531928539277,
+                0.9429324269294739,
+                -0.23545531928539277,
+                0.0,
+                0.666753888130188,
+                0.3329841196537018,
+                0.666753888130188,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "children": [
+                3
+            ]
+        },
+        {
+            "name": "CINEMA_4D_Editor_$AssimpFbx$_PostRotation",
+            "matrix": [
+                -4.371138828673793e-8,
+                -0.0,
+                -1.0,
+                -0.0,
+                -0.0,
+                1.0,
+                -0.0,
+                -0.0,
+                1.0,
+                -0.0,
+                -4.371138828673793e-8,
+                -0.0,
+                -0.0,
+                -0.0,
+                -0.0,
+                1.0
+            ],
+            "children": [
+                4
+            ]
+        },
+        {
+            "name": "CINEMA_4D_Editor"
+        },
+        {
+            "name": "wire",
+            "children": [
+                6,
+                7,
+                8
+            ]
+        },
+        {
+            "name": "wire__3",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                712.8986206054688,
+                571.0384521484375,
+                -2605.93359375,
+                1.0
+            ],
+            "mesh": 0
+        },
+        {
+            "name": "wire__2",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                -1487.65625,
+                74.39382934570313,
+                -2299.339599609375,
+                1.0
+            ],
+            "mesh": 1
+        },
+        {
+            "name": "wire__1",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                -345.8072509765625,
+                25.5493106842041,
+                -1318.923828125,
+                1.0
+            ],
+            "mesh": 2
+        }
+    ],
+    "scenes": [
+        {
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "scene": 0
+}

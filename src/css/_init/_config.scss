@@ -1,0 +1,310 @@
+@charset "utf-8";
+
+//------------------------------------
+// PATH
+//------------------------------------
+$img_path:  "../resource/" !default;
+
+//------------------------------------
+// setting
+//------------------------------------
+$visible: true; // ページ表示・非表示
+$sp_select: true; // スマホの選択範囲を消す
+$hidden: false; // スクロール表示・非表示
+
+//------------------------------------
+// color
+//------------------------------------
+$font-color: #000; // テキスト
+$bg-color: #fff; // 背景
+// $bg-color: #000;
+
+// リンク
+$link-color: $font-color;
+$link-colorHover: $font-color;
+$link-colorVisited: $font-color;
+$link-colorActive: $font-color;
+
+$black       : #000 !default;
+$grayDarker  : #222 !default;
+$grayDark    : #333 !default;
+$gray        : #555 !default;
+$grayLight   : #999 !default;
+$grayLighter : #eee !default;
+$white       : #fff !default;
+
+/* --------------------------------------------------------------------------------
+*   text / font
+-------------------------------------------------------------------------------- */
+
+$deffz: 14; // font-size
+$spdeffz: 12; // font-size
+$fz: 10; // font-size
+$ls: 0.025em; // line-height
+
+$fonttype: 'gothic';  // 'mincho' or  'webfont'
+$font: '';
+$fw: 400;
+
+// device font
+
+  // ゴシック
+  @if $fonttype == 'gothic' { 
+    $font: 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', Meiryo, 'メイリオ', Arial, sans-serif;
+    // $font: "ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+    // $font: 'Poppins', YuGothic, '游ゴシック', sans-serif;
+    // $font: YuGothic, '游ゴシック', 'Hiragino Kaku Gothic ProN', 'YuGothicM', 'ヒラギノ角ゴ ProN W3', Meiryo, 'メイリオ', sans-serif;
+    // $font: 'YuGothicM', 'YuGothicB', 'ヒラギノ角ゴ ProN W3', Meiryo, 'メイリオ', sans-serif;
+    // $font: sans-serif;
+    // $base_font: "Source Code Pro", "メイリオ", "Meiryo", "ヒラギノ明朝 Pro W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", serif, verdana, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;
+    // $font: "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "MS PGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, sans-serif;
+  }
+
+  // 明朝
+  @if $fonttype == 'mincho' { 
+    $font: 'ヒラギノ明朝 Pro W6', 'Hiragino Mincho Pro', 'HGS明朝E', 'ＭＳ Ｐ明朝', Meiryo, 'メイリオ', serif;
+    // $font: '游明朝','YuMincho', 'ヒラギノ明朝 Pro W6', 'Hiragino Mincho Pro', 'HGS明朝E', 'ＭＳ Ｐ明朝', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, 'メイリオ', sans-serif;
+  }
+
+  $font_m: '游明朝','YuMincho', 'ヒラギノ明朝 Pro W6', 'Hiragino Mincho Pro', 'HGS明朝E', 'ＭＳ Ｐ明朝', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, 'メイリオ', sans-serif;
+
+  // web font
+  %Ubuntu_light {
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+  }
+  %Ubuntu_reg {
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+  }
+  %Ubuntu_mid {
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+  }
+  %Ubuntu_semibold {
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+  }
+  %Ubuntu_bold {
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+  }
+  // %Poppins_exbold {
+  //   font-family: 'Poppins', sans-serif;
+  //   font-style: normal;
+  //   font-weight: 800;
+  // }
+
+
+
+/* --------------------------------------------------------------------------------
+*   media query
+-------------------------------------------------------------------------------- */
+// ブレイクポイントを変数指定
+// pc-l | pc-s | tablet | mobile | mobile-s
+
+$bp00: 375px;
+$bp01: 768px;
+$bp02: 960px;
+$bp03: 1280px;
+
+$vwbase: 1440px;
+
+/* --------------------------------------------------------------------------------
+*
+*   z-index
+*
+-------------------------------------------------------------------------------- */
+$z-map: (
+  bg,
+  wrapper,
+  about,
+  header,
+  modal,
+  footer,
+  loading
+);
+
+$z-map-child: (
+  index
+  input
+  loading
+  movie
+  details
+);
+
+// z-index
+@function z($name) {
+  @return index($z-map, $name);
+}
+// z-index-child
+@function zChild($name) {
+  @return index($z-map-child, $name);
+}
+
+/* --------------------------------------------------------------------------------
+*
+*   easing
+*
+-------------------------------------------------------------------------------- */
+$ease              : cubic-bezier(.25, .1, .25, 1);
+$easeIn           : cubic-bezier(.42, .0, 1, 1);
+$easeOut          : cubic-bezier(.0, .0, .58, 1);
+$easeInOut       : cubic-bezier(.42, .0, 0.58, 1);
+$easeInSine      : cubic-bezier(.47, 0, .745, .715);
+$easeOutSine     : cubic-bezier(.39, .575, .565, 1);
+$easeInOutSine  : cubic-bezier(.445, .05, .55, .95);
+$easeInQuad      : cubic-bezier(.55, .085, .68, .53);
+$easeOutQuad     : cubic-bezier(.25, .46, .45, .94);
+$easeInOutQuad  : cubic-bezier(.455, .03, .515, .955);
+$easeInCubic     : cubic-bezier(.55, .055, .675, .19);
+$easeOutCubic    : cubic-bezier(.215, .61, .355, 1);
+$easeInOutCubic : cubic-bezier(.645, .045, .355, 1);
+$easeInQuart     : cubic-bezier(.895, .03, .685, .22);
+$easeOutQuart    : cubic-bezier(.165, .84, .44, 1);
+$easeInOutQuart : cubic-bezier(.77, 0, .175, 1);
+$easeInQuint     : cubic-bezier(.755, .05, .855, .06);
+$easeOutQuint    : cubic-bezier(.23, 1, .32, 1);
+$easeInOutQuint : cubic-bezier(.86, 0, .07, 1);
+$easeInExpo      : cubic-bezier(.95, .05, .795, .035);
+$easeOutExpo     : cubic-bezier(.19, 1, .22, 1);
+$easeInOutExpo  : cubic-bezier(1, 0, 0, 1);
+$easeInCirc      : cubic-bezier(.6, .04, .98, .335);
+$easeOutCirc     : cubic-bezier(.075, .82, .165, 1);
+$easeInOutCirc  : cubic-bezier(.785, .135, .15, .86);
+$easeInBack      : cubic-bezier(.6, -.28, .735, .045);
+$easeOutBack     : cubic-bezier(.175, .885, .32, 1.275);
+$easeInOutBack  : cubic-bezier(.68, -.55, .265, 1.55);
+
+/* --------------------------------------------------------------------------------
+*
+*   texture
+*
+-------------------------------------------------------------------------------- */
+$tex01: '../resource/texture/tex01/01.png';
+$tex02: '../resource/texture/tex01/02.png';
+$tex03: '../resource/texture/tex01/03.png';
+$tex04: '../resource/texture/tex01/04.png';
+$tex05: '../resource/texture/tex01/05.png';
+$tex01: '../resource/texture/tex04/01.jpg';
+$tex02: '../resource/texture/tex04/02.jpg';
+$tex03: '../resource/texture/tex04/03.jpg';
+$tex04: '../resource/texture/tex04/04.jpg';
+$tex05: '../resource/texture/tex04/05.jpg';
+
+/* --------------------------------------------------------------------------------
+*
+*   color
+*
+-------------------------------------------------------------------------------- */      
+// childy
+  /* HSL */
+  $color00_1: hsla(0%, 0%, 100%, 1);
+  $color00_2: hsla(165%, 56%, 69%, 1);
+  $color00_3: hsla(153%, 100%, 82%, 1);
+  $color00_4: hsla(5%, 100%, 81%, 1);
+  $color00_5: hsla(359%, 100%, 70%, 1);
+
+  /* RGB */
+  $color00_1: rgba(255, 255, 255, 1);
+  $color00_2: rgba(132, 220, 198, 1);
+  $color00_3: rgba(165, 255, 214, 1);
+  $color00_4: rgba(255, 166, 158, 1);
+  $color00_5: rgba(255, 104, 107, 1);
+
+// vivid
+  /* HSL */
+  $color01_1: hsla(207%, 95%, 8%, 1);
+  $color01_2: hsla(100%, 100%, 99%, 1);
+  $color01_3: hsla(174%, 62%, 47%, 1);
+  $color01_4: hsla(353%, 81%, 51%, 1);
+  $color01_5: hsla(35%, 100%, 55%, 1);
+
+  /* RGB */
+  $color01_1: rgba(1, 22, 39, 1);
+  $color01_2: rgba(253, 255, 252, 1);
+  $color01_3: rgba(46, 196, 182, 1);
+  $color01_4: rgba(231, 29, 54, 1);
+  $color01_5: rgba(255, 159, 28, 1);
+  
+// blue
+  /* HSL */
+  $color02_1: hsla(225%, 59%, 11%, 1);
+  $color02_2: hsla(225%, 40%, 18%, 1);
+  $color02_3: hsla(213%, 30%, 32%, 1);
+  $color02_4: hsla(179%, 44%, 55%, 1);
+  $color02_5: hsla(171%, 100%, 72%, 1);
+
+  /* RGB */
+  $color02_1: rgba(11, 19, 43, 1);
+  $color02_2: rgba(28, 37, 65, 1);
+  $color02_3: rgba(58, 80, 107, 1);
+  $color02_4: rgba(91, 192, 190, 1);
+  $color02_5: rgba(111, 255, 233, 1);
+  
+// childy2
+  /* HSL */
+  $color03_1: hsla(249%, 84%, 48%, 1);
+  $color03_2: hsla(201%, 95%, 76%, 1);
+  $color03_3: hsla(171%, 83%, 43%, 1);
+  $color03_4: hsla(42%, 100%, 64%, 1);
+  $color03_5: hsla(341%, 100%, 50%, 1);
+
+  /* RGB */
+  $color03_1: rgba(51, 20, 223, 1);
+  $color03_2: rgba(136, 211, 252, 1);
+  $color03_3: rgba(19, 202, 176, 1);
+  $color03_4: rgba(255, 200, 70, 1);
+  $color03_5: rgba(255, 0, 79, 1);
+  
+// moody
+  /* Coolors Exported Palette - coolors.co/040091-6901f5-b735fb-fe249b-ff5a78 */
+
+  /* HSL */
+  $color04_1: hsla(242%, 100%, 28%, 1);
+  $color04_2: hsla(266%, 99%, 48%, 1);
+  $color04_3: hsla(279%, 96%, 60%, 1);
+  $color04_4: hsla(327%, 99%, 57%, 1);
+  $color04_5: hsla(349%, 100%, 68%, 1);
+
+  /* RGB */
+  $color04_1: rgba(4, 0, 145, 1);
+  $color04_2: rgba(105, 1, 245, 1);
+  $color04_3: rgba(183, 53, 251, 1);
+  $color04_4: rgba(254, 36, 155, 1);
+  $color04_5: rgba(255, 90, 120, 1);
+  
+// black
+  /* HSL */
+  $color05_1: hsla(231%, 11%, 38%, 1);
+  $color05_2: hsla(209%, 29%, 80%, 1);
+  $color05_3: hsla(218%, 100%, 98%, 1);
+  $color05_4: hsla(220%, 14%, 72%, 1);
+  $color05_5: hsla(351%, 64%, 2%, 1);
+
+  /* RGB */
+  $color05_1: rgba(86, 89, 107, 1);
+  $color05_2: rgba(190, 205, 219, 1);
+  $color05_3: rgba(244, 248, 255, 1);
+  $color05_4: rgba(172, 179, 193, 1);
+  $color05_5: rgba(9, 2, 3, 1);
+  
+// green
+  /* HSL */
+  $color06_1: hsla(0%, 0%, 91%, 1);
+  $color06_2: hsla(0%, 0%, 100%, 1);
+  $color06_3: hsla(51%, 100%, 50%, 1);
+  $color06_4: hsla(66%, 100%, 31%, 1);
+  $color06_5: hsla(147%, 100%, 29%, 1);
+
+  /* RGB */
+  $color06_1: rgba(232, 232, 232, 1);
+  $color06_2: rgba(255, 255, 255, 1);
+  $color06_3: rgba(255, 216, 0, 1);
+  $color06_4: rgba(142, 158, 0, 1);
+  $color06_5: rgba(0, 147, 66, 1);
